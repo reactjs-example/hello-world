@@ -24,7 +24,7 @@ function App1() {
 function App(props)
 {
   console.log(props.message);
-  return nestedReactTag();
+  return usingConditionalWithArray();
 }
 /** NESTED TAG */
 function UserGreeting(props) {
@@ -75,10 +75,10 @@ function usingConditionalWithArray()
         ages.map(age=>{
           if(age%2 ==0)
           {
-            return <tr><td>{age}</td><td>Even</td></tr>
+           return  <tr><td>{age}</td><td>Even</td></tr>
           }
           else{
-            return <tr><td>{age}</td><td>Odd</td></tr>
+           return  <tr><td>{age}</td><td>Odd</td></tr>
           }
         })
       }
