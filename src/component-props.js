@@ -1,3 +1,4 @@
+import React from "react";
 
 const Container=(props)=>{
 
@@ -16,4 +17,13 @@ function MyContainer(props)
     );
 }
 
-export default MyContainer
+
+// doubt
+class Welcome extends React.Component {
+    render() {
+      return <h1>Hello Welcome, {this.props.name}</h1>;
+    }
+  }
+
+  
+export default Welcome
