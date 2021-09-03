@@ -37,5 +37,44 @@ class Welcome extends React.Component {
           </div>
       );
   }
+
+  function extractComponent(){
+
+    return(
+        <div>
+            <Welcome name="John 1"/>
+            {/* <div>
+                <Welcome name="John 2"/>  */}
+                <John2/>
+                 {/* <div>
+                    <Welcome name="John 3"/> 
+                </div>   */}
+                <John3/>
+            {/* </div> */}
+        </div>
+    )
+  }
   
-export default App
+
+  function John3(){
+      return <h1>"Welcome john3"</h1>
+  }
+
+  function John2(){
+    return <h1>"Welcome john2"</h1>
+}
+
+// function App1()
+// {
+//     return (
+//         <div>
+//             <Welcome name="John 1"/>
+            
+//             <Welcome name="John 2"/>
+            
+//             <Welcome name="John 3"/>
+//         </div>
+//     );
+// }
+
+export default extractComponent
