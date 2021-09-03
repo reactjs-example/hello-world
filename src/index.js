@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import MyElement from './rendering-element';
+import MyContainer from './component-props';
 
 // ReactDOM.render(
 //   <React.StrictMode>
@@ -12,12 +13,15 @@ import MyElement from './rendering-element';
 //   document.getElementById('root')
 // );
 
-function tick(){
-  console.log("hello");
-ReactDOM.render(<MyElement/>, document.getElementById("root"));
-}
 
-setInterval(tick,1000);
+// function tick(){
+//   console.log("hello");
+// ReactDOM.render(<MyElement/>, document.getElementById("root"));
+// }
+
+// setInterval(tick,1000);
+
+ReactDOM.render(<MyContainer message="react is awesome"/>, document.getElementById("root"));
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
