@@ -25,5 +25,17 @@ class Welcome extends React.Component {
     }
   }
 
+  function App()
+  {
+      return (
+          <div>
+              <Welcome name="John 1"/>
+              
+              <Welcome name="John 2"/>
+              
+              <Welcome name="John 3"/>
+          </div>
+      );
+  }
   
-export default Welcome
+export default App
