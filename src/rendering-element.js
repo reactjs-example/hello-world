@@ -1,5 +1,5 @@
 const MyElement = ()=>{
-    return <h1> Hello World {new Date().toLocaleTimeString()}</h1>
+    return <div><h1> Hello World </h1><h1>{new Date().toLocaleTimeString()}</h1></div>
 }
 
 export default MyElement
