@@ -5,6 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import MyElement from './rendering-element';
 import MyContainer from './component-props';
+import MyButton from './event-handler';
 
 // ReactDOM.render(
 //   <React.StrictMode>
@@ -20,8 +21,8 @@ import MyContainer from './component-props';
 // }
 
 // setInterval(tick,1000);
-
-ReactDOM.render(<MyContainer name="react is awesome"/>, document.getElementById("root"));
+// ReactDOM.render(<MyContainer name="react is awesome"/>, document.getElementById("root"));
+ReactDOM.render(<MyButton name="click me"/>, document.getElementById("root"));
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
