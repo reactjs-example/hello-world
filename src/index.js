@@ -7,6 +7,8 @@ import MyElement from './rendering-element';
 import MyContainer from './component-props';
 import MyButton from './event-handler';
 import Toggle from './toggle';
+import { render } from '@testing-library/react';
+import LoggingButton from './render';
 
 // ReactDOM.render(
 //   <React.StrictMode>
@@ -26,9 +28,13 @@ import Toggle from './toggle';
 // ReactDOM.render(<MyButton name="click me"/>, document.getElementById("root"));
 
 
-ReactDOM.render(<Toggle/>,
-   document.getElementById("root")
-   );
+// ReactDOM.render(<Toggle/>,
+//    document.getElementById("root")
+//    );
+
+   ReactDOM.render(<LoggingButton/>,
+    document.getElementById("root")
+    );
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
