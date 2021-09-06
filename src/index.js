@@ -9,6 +9,7 @@ import MyButton from './event-handler';
 import Toggle from './toggle';
 import { render } from '@testing-library/react';
 import LoggingButton from './render';
+import { MainApp } from './MainApp';
 
 // ReactDOM.render(
 //   <React.StrictMode>
@@ -32,7 +33,7 @@ import LoggingButton from './render';
 //    document.getElementById("root")
 //    );
 
-   ReactDOM.render(<LoggingButton/>,
+   ReactDOM.render(<MainApp/>,
     document.getElementById("root")
     );
 // If you want to start measuring performance in your app, pass a function
