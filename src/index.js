@@ -9,6 +9,8 @@ import MyButton from './event-handler';
 import Toggle from './toggle';
 import { render } from '@testing-library/react';
 import LoggingButton from './render';
+import Greeting from './cinditional-rendering';
+import AppCon from './conditional-rendering2';
 
 // ReactDOM.render(
 //   <React.StrictMode>
@@ -32,9 +34,23 @@ import LoggingButton from './render';
 //    document.getElementById("root")
 //    );
 
-   ReactDOM.render(<LoggingButton/>,
+  //  ReactDOM.render(<LoggingButton/>,
+  //   document.getElementById("root")
+  //   );
+
+
+  // ReactDOM.render(<Greeting/>,
+  //   document.getElementById("root")
+  //   );
+
+  // ReactDOM.render(<LoginControl/>,
+  //   document.getElementById("root")
+  //   );
+
+  ReactDOM.render(<AppCon/>,
     document.getElementById("root")
     );
+
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
