@@ -2,8 +2,9 @@
 import { useState } from "react";
 export function ExpenseForm() {
 
-    const expenseFormHandler = () => {
-        console.log("here")
+    const expenseFormHandler = (event) => {
+        event.preventDefault(); // to restrict page reload onSubmit of form
+        console.log(inputDataObject);
     }
 
      /** single state with spread operator */
