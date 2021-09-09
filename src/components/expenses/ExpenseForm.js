@@ -6,27 +6,47 @@ export function ExpenseForm() {
         console.log("here")
     }
 
+     /** single state with spread operator */
+     const [inputDataObject,setInputData] = useState({
+        title:'',
+        amount:'',
+        date:''
+    });
+
+
+    /** multiple states */
     const [title, updateTitle] = useState('');
     const [amount, updateAmount] = useState('');
     const [date, updateDate] = useState('');
 
     const titleChangeHandler = (event) => {
         console.log(event.target.value);
-        updateTitle(event.target.value);
+        updateTitle(event.target.value); // multiState
+        setInputData({...inputDataObject,title:event.target.value}); // singleState
+     
+        /** dont do below
+         * This will override the object state and will retain only title field
+         */
+       // setInputData({title:event.target.value}); // multiState
     };
 
     const dateChangeHandler = (event) => {
         console.log(event.target.value);
         updateDate(event.target.value);
+        setInputData({...inputDataObject,date:event.target.value});
     };
 
     const amountChangeHandler = (event) => {
         console.log(event.target.value);
         updateAmount(event.target.value);
+        setInputData({...inputDataObject,amount:event.target.value});
     };
+
     return (
         <div>
             {title} | {amount} | {date}
+            <br/>
+            {inputDataObject.title} | {inputDataObject.amount} | {inputDataObject.date}
             <form onSubmit={expenseFormHandler}>
                 <div className="form-control">
                     <label>Title</label>
