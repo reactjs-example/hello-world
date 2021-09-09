@@ -5,12 +5,16 @@ export function ExpenseForm() {
     const expenseFormHandler = () => {
         console.log("here")
     }
+
+    const titleChangeHandler = (event) =>{
+        console.log(event.target.value);
+    }
     return (
         <div>
             <form onSubmit={expenseFormHandler}>
                 <div className="form-control">
                     <label>Title</label> 
-                     <input type="text"  />
+                     <input type="text" onChange={titleChangeHandler}  />
                 </div>
 
                 <div className="form-control">
