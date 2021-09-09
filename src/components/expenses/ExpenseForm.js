@@ -22,12 +22,17 @@ export function ExpenseForm() {
     const titleChangeHandler = (event) => {
         console.log(event.target.value);
         updateTitle(event.target.value); // multiState
-        setInputData({...inputDataObject,title:event.target.value}); // singleState
+       // setInputData({...inputDataObject,title:event.target.value}); // singleState
      
         /** dont do below
          * This will override the object state and will retain only title field
          */
-       // setInputData({title:event.target.value}); // multiState
+       // setInputData({title:event.target.value}); 
+
+       // use prevState rather depending on object. react takes care of prevState
+       setInputData((prevState)=>{
+           return {...prevState,title:event.target.value}; // singleState
+       })
     };
 
     const dateChangeHandler = (event) => {
