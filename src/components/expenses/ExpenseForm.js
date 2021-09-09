@@ -48,6 +48,13 @@ export function ExpenseForm() {
         setInputData({...inputDataObject,amount:event.target.value});
     };
 
+
+    const clearInputDataObjectHandler=()=>{
+        setInputData({title:'',
+        amount:'',
+        date:''});
+    }
+
     return (
         <div>
             {title} | {amount} | {date}
@@ -56,16 +63,17 @@ export function ExpenseForm() {
             <form onSubmit={expenseFormHandler}>
                 <div className="form-control">
                     <label>Title</label>
-                    <input type="text" onChange={titleChangeHandler} />
+                    <input value={inputDataObject.title} type="text" onChange={titleChangeHandler} />
                 </div>
 
                 <div className="form-control">
-                    <label>Amount</label>  <input type="number" onChange={amountChangeHandler} />
+                    <label>Amount</label>  <input value={inputDataObject.amount} type="number" onChange={amountChangeHandler} />
                 </div>
                 <div className="form-control">
-                    <label>Date</label>  <input type="date" onChange={dateChangeHandler} />
+                    <label>Date</label>  <input value={inputDataObject.date} type="date" onChange={dateChangeHandler} />
                 </div>
                 <button type="submit">Submit</button>
+                <button onClick={clearInputDataObjectHandler}>Clear</button>
             </form>
         </div>
     );
