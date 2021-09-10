@@ -6,12 +6,17 @@ import "./MainApp.css";
 
 export class MainApp extends React.Component{
 
+     expenseFormSaveHandler(inputObject){
+         console.log("form handler");
+         console.log(inputObject);
+       return null;
+    }
 
     render()
     {
         return (
             <div className="container">
-            <ExpenseForm/>
+            <ExpenseForm saveData={this.expenseFormSaveHandler}/>
             <ExpenseItems/>
             </div>
         );
