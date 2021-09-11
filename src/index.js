@@ -11,6 +11,9 @@ import { render } from '@testing-library/react';
 import LoggingButton from './render';
 import Greeting from './cinditional-rendering';
 import AppCon from './conditional-rendering2';
+import NumberList from './list-keys';
+import ListItems from './extracting-list';
+import Blog from './extracting-list';
 
 // ReactDOM.render(
 //   <React.StrictMode>
@@ -47,9 +50,37 @@ import AppCon from './conditional-rendering2';
   //   document.getElementById("root")
   //   );
 
-  ReactDOM.render(<AppCon/>,
-    document.getElementById("root")
+  // ReactDOM.render(<AppCon/>,
+  //   document.getElementById("root")
+  //   );
+
+  // ReactDOM.render(<div><NumberList numbers={[1,2]}/> <NumberList numbers={[100,200]}/></div>,
+  //   document.getElementById("root")
+  //   );
+
+  // ReactDOM.render(<div><ListItems value={[1,2]}/> <ListItems value={[100,200]}/></div>,
+  //   document.getElementById("root")
+  //   );
+
+    // ReactDOM.render(<div><NumberList numbers={[1,2,3]}/> <NumberList numbers={[100,200,300]}/></div>,
+    //   document.getElementById("root")
+    //   );
+
+    const posts = [
+      {id: 1, title: 'Hello World', content: 'Welcome to learning React!'},
+      {id: 2, title: 'Installation', content: 'You can install React from npm.'}
+    ];
+
+    ReactDOM.render(
+      <Blog posts={posts}/>,
+      document.getElementById('root')
     );
+
+    // ReactDOM.render(<div><Blog posts={[ {id: 1, title: 'Hello World', content: 'Welcome to learning React!'},
+    // {id: 2, title: 'Installation', content: 'You can install React from npm.'}]}/> </div>,
+    //   document.getElementById("root")
+    //   );
+
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
