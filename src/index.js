@@ -14,6 +14,8 @@ import AppCon from './conditional-rendering2';
 import NumberList from './list-keys';
 import ListItems from './extracting-list';
 import Blog from './extracting-list';
+import NameForm from './form';
+import Form1 from './handlingMultipleinput';
 
 // ReactDOM.render(
 //   <React.StrictMode>
@@ -66,20 +68,36 @@ import Blog from './extracting-list';
     //   document.getElementById("root")
     //   );
 
-    const posts = [
-      {id: 1, title: 'Hello World', content: 'Welcome to learning React!'},
-      {id: 2, title: 'Installation', content: 'You can install React from npm.'}
-    ];
+    // const posts = [
+    //   {id: 1, title: 'Hello World', content: 'Welcome to learning React!'},
+    //   {id: 2, title: 'Installation', content: 'You can install React from npm.'}
+    // ];
 
-    ReactDOM.render(
-      <Blog posts={posts}/>,
-      document.getElementById('root')
-    );
+    // ReactDOM.render(
+    //   <Blog posts={posts}/>,
+    //   document.getElementById('root')
+    // );
 
     // ReactDOM.render(<div><Blog posts={[ {id: 1, title: 'Hello World', content: 'Welcome to learning React!'},
     // {id: 2, title: 'Installation', content: 'You can install React from npm.'}]}/> </div>,
     //   document.getElementById("root")
     //   );
+
+// const element=<NameForm/>
+//     ReactDOM.render(
+//       element,
+//       document.getElementById('root')
+//     );
+
+
+     const onClickHandler=(data)=>{
+       console.log(data);
+     }
+    const element=<Form1 clickFunc={onClickHandler}/>
+    ReactDOM.render(
+      element,
+      document.getElementById('root')
+    );
 
 
 // If you want to start measuring performance in your app, pass a function
