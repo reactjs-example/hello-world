@@ -1,10 +1,11 @@
 
 import { useState } from "react";
-export function ExpenseForm() {
+export function ExpenseForm(props) {
 
     const expenseFormHandler = (event) => {
         event.preventDefault(); // to restrict page reload onSubmit of form
         console.log(inputDataObject);
+        props.saveData(inputDataObject);
     }
 
      /** single state with spread operator */
