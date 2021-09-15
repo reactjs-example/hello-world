@@ -23,7 +23,7 @@ export class ExpenseItems extends React.Component {
        
         return <div>
             {this.props.items.map(item=>
-                <ExpenseItem key={item.title} date={item.date} title={item.title} amount={item.amount} />
+                <ExpenseItem key={Math.random().toString()} date={item.date} title={item.title} amount={item.amount} />
             )}
         </div>
     }
